@@ -104,6 +104,19 @@
         </div>
     </div>
 
+    <script src="offline-shim.js"></script>
     <script type="module" src="main.js"></script>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const box = document.getElementById("token-display");
+    const text = document.getElementById("user-tokens");
+    if (box && text) {
+      box.classList.remove("hidden");
+      text.innerText = "∞";
+    }
+  });
+</script>
+
 </body>
 </html>
